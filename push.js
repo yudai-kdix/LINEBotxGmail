@@ -24,9 +24,9 @@ function getGmailMessage(hour = 0.5) {
   //時間を指定
   const timeQuery = "after:" + termStr;
   // カテゴリーを指定  social:ソーシャルプロモーション、promotions:プロモーションを除外
-  const categoryQuery = " -category:social -category:promotions";
+  const categoryQuery = "-category:social -category:promotions";
   //  クエリを作成
-  const strQuery = timeQuery + categoryQuery;
+  const strQuery = timeQuery + " " + categoryQuery;
   // めーるを取得
   var threads = GmailApp.search(strQuery);
 
