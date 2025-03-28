@@ -94,6 +94,8 @@ function sendMessage() {
         messages = [];
       }
     }
-    pushMailMessage(messages)
+    let res = pushMailMessage(messages);
+    console.log(res);
+    messages = [];
   }
 }
